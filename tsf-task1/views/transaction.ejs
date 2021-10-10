@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('head') %>
+  </head>
+  <body>
+    <%- include('header') %>
+    <div id="main-content" class="container">
+      <div id="main" class="card card-body">
+        <div class="card card-body">
+          <form
+            id="addform"
+            class="form-inline mb-3"
+            action="/api/transaction"
+            method="post"
+          >
+            <div class="form-group">
+              <h2 class="title">Transaction From</h2>
+              <br />
+              <h3>Account number</h3>
+              <input
+                required
+                type="text"
+                class="form-control mr-2 ml-"
+                name="account1"
+                id="account1"
+              />
+              <br />
+              <h3>transfer</h3>
+              <input
+                required
+                type="text"
+                class="form-control mr-2 ml-"
+                name="amount"
+                id="amount"
+              />
+              <br />
+              <br />
+              <h2 class="title">Transaction To</h2>
+              <br />
+              <h3>Account number</h3>
+              <input
+                required
+                type="text"
+                class="form-control mr-2 ml-"
+                name="account2"
+                id="account2"
+              />
+              <br />
+              <br />
+              <button class="btn btn-primary">Submit</button>
+              <!--<input id = "submitbtn" type="submit" class="btn btn-dark" value="Submit"/>-->
+              <!--<input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />-->
+            </div>
+          </form>
+        </div>
+      </div>
+      <br /><br />
+    </div>
+
+    <%- include('footer') %>
+
+    <!--<script src="transc.js"></script>-->
+    <!--<script src="practiceTrans.js"></script>-->
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('head') %>
+  </head>
+  <body>
+    <%- include('header') %>
+    <div id="main-content" class="container">
+      <div class="jumbo-table table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-bordered table-striped mb-0">
+          <thead>
+            <tr>
+              <th scope="col">Account Number</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Balance</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <% customers.forEach(customers => { %>
+            <tr class="table-row">
+              <td><%= customers.account %></td>
+              <td><%= customers.name %></td>
+              <td class="email"><%= customers.email %></td>
+              <td><%= customers.balance %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <div style="align-self: center">
+        <a href="/api/transaction" style="align-items: center"
+          ><button onclick="greet(1)">Transfer</button></a
+        >
+      </div>
+    </div>
+
+    <%- include('footer') %>
+    <!--<script src="transc.js"></script>-->
+    <script src="../js/practice.js"></script>
+  </body>
+</html>
